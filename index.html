@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Genric chat app</title>
+    <style>
+      
+      /* body{
+        background-image: linear-gradient(rgb(223, 211, 50),green);
+      } */
+
+      .container
+      {
+        max-width:auto;
+        background-color:green ;
+        margin: auto;
+        height: 92vh;
+        border: 3px solid blueviolet;
+        overflow-y: auto;
+      }
+
+      .message
+{
+  background-color: grey;
+  padding: 12px;
+  width: 24%;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 17px;
+  
+}
+
+.left
+{
+  float: left;
+  clear: both;
+  
+}
+.right
+{
+  float: right;
+  clear: both;
+}
+/* #send-container
+{
+  text-align: center;
+  
+} */
+#send-container { background: rgba(0, 0, 0, 0.15);
+  padding: 0.25rem; 
+  position: fixed; bottom: 0;
+  left: 0; right: 0; display: flex;
+  height: 3rem; box-sizing: border-box; 
+  backdrop-filter: blur(10px); 
+  
+}
+ #send-container > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+
+    #messageInp { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+      #messageInp:focus { outline: none; }
+     
+    
+   
+     
+    </style>
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="./client.js">
+     
+    </script>
+  </head>
+  <body>
+
+    <div class="container">
+      <!-- <div class="left message">Sova:hi</div>
+      <div class="right   message">jett:hello</div> -->
+    </div>
+    <audio src="ting.mp3" crossorigin="anonymous"></audio>
+
+    <div class="send">
+      <form action="#" id="send-container">
+        <input type="text" name="messageInp" id="messageInp">
+        <button class="btn" type="submit">Send</button>
+      </form>
+    </div>
+   
+  </body>
+</html>
